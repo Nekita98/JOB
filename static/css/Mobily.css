@@ -1,0 +1,840 @@
+/* Мобильные стили (до 768px) */
+@media only screen and (max-width: 768px) {
+  /* Базовые настройки */
+  body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: #333;
+    line-height: 1.5;
+  }
+
+  /* Шапка с контактами */
+  .header-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    min-height: 70px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+    background: linear-gradient(135deg, #0a1f44 0%, #1a3e8c 100%);
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+    border-bottom: 2px solid #d4af37;
+  }
+
+  .logo-and-contacts {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .left-block {
+    display: flex;
+    align-items: center;
+  }
+
+  .mann {
+    font-size: 24px;
+    font-weight: 900;
+    margin: 0;
+    color: #d4af37;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    border-radius: 8px;
+    border: 2px solid #d4af37;
+    object-fit: cover;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .contacts-vertical {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #ffffff;
+  }
+
+  .phone, .email {
+    font-size: 12px;
+    padding-left: 22px;
+    margin: 2px 0;
+    position: relative;
+    white-space: nowrap;
+  }
+
+  .phone::before, .email::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .phone::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23d4af37'%3E%3Cpath d='M20 15.5c-1.2 0-2.5-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.5-5.2-3.8-6.6-6.6l2.2-2.2c.3-.3.4-.7.2-1-.3-1.1-.5-2.4-.5-3.6 0-.6-.4-1-1-1H4c-.6 0-1 .4-1 1 0 9.4 7.6 17 17 17 .6 0 1-.4 1-1v-3.5c0-.6-.4-1-1-1z'/%3E%3C/svg%3E");
+  }
+
+  .email::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23d4af37'%3E%3Cpath d='M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4.7l-8 5.3-8-5.3V6l8 5.3 8-5.3v2.7z'/%3E%3C/svg%3E");
+  }
+
+  /* Навигация */
+  .top-right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(212, 175, 55, 0.3);
+  }
+
+  .nav-links a {
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    background-color: rgba(212, 175, 55, 0.2);
+  }
+
+  /* Основной контент */
+  .content-section {
+      padding: 90px 15px 30px;
+      margin-top: 30px; /* Добавлено отступ сверху */
+      width: 100%;
+      box-sizing: border-box;
+  }
+
+  /* Или если нужно опустить только блок "Ваш надежный партнер" */
+  .calculator-intro {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      margin-top: 30px; /* Добавлено отступ сверху только для этого блока */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      border: 2px solid #d4af37;
+  }
+
+  .intro-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #d4af37; /* Золотой цвет текста */
+      text-shadow: none; /* Убираем тень если была */
+  }
+
+  .intro-text {
+      font-size: 14px;
+      margin: 0;
+      color: #0a1f44; /* Темно-синий цвет текста */
+      opacity: 1; /* Убираем прозрачность */
+      font-weight: 500;
+  }
+
+   /* Горизонтальные кнопки выбора техники */
+  .text-background {
+    padding: 12px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    background: white;
+    border-radius: 8px;
+  }
+
+  .auto-tech-trio {
+    display: flex;
+    flex-direction: row; /* Горизонтальное расположение */
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .auto-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 4px;
+    min-width: 0;
+    transition: all 0.3s ease;
+  }
+
+  .auto-item:hover {
+    transform: translateY(-2px);
+  }
+
+  .checkbox {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 6px;
+    border: 2px solid #0a1f44;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .checkbox.checked {
+    background-color: #f0f4f9;
+    border-color: #d4af37;
+  }
+
+  .checkbox.checked::after {
+    content: "✓";
+    color: #d4af37;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .auto-text {
+    font-size: 12px;
+    text-align: center;
+    line-height: 1.3;
+    white-space: normal;
+    margin: 0;
+    color: #0a1f44;
+    font-weight: 600;
+  }
+  
+
+  /* Калькулятор */
+  #calculator-section {
+    padding: 20px;
+    margin: 0 auto 25px;
+    width: 100%;
+    box-sizing: border-box;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  #calculator-section h2 {
+    font-size: 18px;
+    color: #0a1f44;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #d4af37;
+    text-align: center;
+  }
+
+  /* Форма калькулятора */
+  #calculator-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .form-group {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #0a1f44;
+    font-size: 14px;
+  }
+
+  input[type="text"],
+  select,
+  .address-input,
+  .styled-input {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background: #fff;
+    transition: all 0.3s ease;
+  }
+
+  input[type="text"]:focus,
+  select:focus,
+  .address-input:focus,
+  .styled-input:focus {
+    border-color: #d4af37;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+  }
+
+  /* Стили для полей с иконками */
+  .address-input-container,
+  .input-container {
+    position: relative;
+  }
+
+  .address-input-icon,
+  .input-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #0a1f44;
+    font-size: 16px;
+  }
+
+  /* Общие стили для секций */
+  .load-method-label,
+  .unload-method-label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    min-width: 120px;
+    margin-right: 15px;
+    flex-shrink: 0;
+  }
+
+  /* Главный контейнер строки */
+  .form-group > div[style*="align-items: flex-start;"] {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  /* Контейнер для опций и подсказки */
+  .form-group > div[style*="align-items: flex-start;"] > div[style*="flex-direction: column;"] {
+    flex: 1;
+    min-width: 0; /* Критически важно для flex-элементов */
+    width: 100%;
+  }
+
+  /* Контейнеры с радио-кнопками */
+  #loadingOptions,
+  #unloadOptions {
+    display: flex;
+    gap: 10px;
+    padding-bottom: 15px;
+    overflow-x: auto;
+    width: 100%;
+    -webkit-overflow-scrolling: touch; /* Для плавного скролла на iOS */
+  }
+
+  /* Фикс для Firefox */
+  @-moz-document url-prefix() {
+    #loadingOptions,
+    #unloadOptions {
+      scrollbar-width: thin;
+      scrollbar-color: #d4af37 #f5f7fa;
+    }
+  }
+
+  /* Полоса прокрутки для WebKit */
+  #loadingOptions::-webkit-scrollbar,
+  #unloadOptions::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  #loadingOptions::-webkit-scrollbar-track,
+  #unloadOptions::-webkit-scrollbar-track {
+    background: #f5f7fa;
+  }
+
+  #loadingOptions::-webkit-scrollbar-thumb,
+  #unloadOptions::-webkit-scrollbar-thumb {
+    background-color: #d4af37;
+    border-radius: 3px;
+  }
+
+  /* Стили для вариантов выбора */
+  .loading-option-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: #f5f7fa;
+    border-radius: 20px;
+    border: 1px solid #e1e5eb;
+    font-size: 14px;
+    color: #0a1f44;
+    user-select: none;
+    flex-shrink: 0; /* Предотвращаем сжатие */
+    white-space: nowrap;
+  }
+
+  /* Остальные стили остаются без изменений */
+  .custom-radio {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #0a1f44;
+    border-radius: 4px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .checkmark {
+    display: none;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+  }
+
+  input[type="radio"]:checked + .custom-radio {
+    border-color: #d4af37;
+    background-color: #d4af37;
+  }
+
+  input[type="radio"]:checked + .custom-radio .checkmark {
+    display: block;
+  }
+
+  /* Мобильная адаптация */
+  @media (max-width: 768px) {
+    .form-group > div[style*="align-items: flex-start;"] {
+      flex-direction: column;
+    }
+    
+    .load-method-label,
+    .unload-method-label {
+      margin-right: 0;
+      margin-bottom: 8px;
+    }
+    
+    .loading-option-label {
+      padding: 8px 12px;
+    }
+  }
+
+  /* Кнопка добавления адреса */
+  .add-address-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 15px;
+    background-color: #0a1f44;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    text-decoration: none;
+    width: auto;
+  }
+
+  .add-address-btn:hover {
+    background-color: #1a3e8c;
+    transform: translateY(-2px);
+  }
+
+  .add-address-btn i {
+    font-size: 14px;
+  }
+
+  /* Блок дополнительных услуг */
+  #additionalServices {
+    color: #0a1f44;
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  #expeditingService,
+  #insuranceService {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+
+  /* Кнопка отправки заявки */
+  .submit-application-btn {
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #0a1f44, #1a3e8c);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-top: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .submit-application-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #1a3e8c, #0a1f44);
+  }
+
+  /* Раздел "Нам доверяют" */
+  /* Раздел "Нам доверяют" */
+  #nam-doveriut {
+    background: white;
+    padding: 30px 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  #nam-doveriut h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #0a1f44;
+    margin-top: 0;
+  }
+
+  #trust-gallery {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 10px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Стили для скроллбара */
+  #trust-gallery::-webkit-scrollbar {
+    height: 6px; /* Высота горизонтального скроллбара */
+  }
+
+  #trust-gallery::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+  }
+
+  #trust-gallery::-webkit-scrollbar-thumb,
+  #loadingOptions::-webkit-scrollbar-thumb,
+  #unloadOptions::-webkit-scrollbar-thumb {
+    background-color: #d4af37;
+    border-radius: 3px;
+  }
+
+  #trust-gallery img {
+    height: 100px;
+    width: auto;
+    margin-right: 10px;
+    border-radius: 8px;
+    border: 2px solid #0a1f44;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  #trust-gallery img:hover {
+    transform: scale(1.03);
+  }
+
+  /* Модальное окно */
+  #modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+  }
+
+  #modalContent {
+    background: white;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    max-height: 80vh;
+    overflow: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Скрываем карту на мобильных */
+  #mapContainer {
+    display: none !important;
+  }
+}
+
+/* Дополнительные настройки для очень маленьких экранов */
+@media only screen and (max-width: 480px) {
+  .mann {
+    font-size: 22px;
+  }
+
+  .logo {
+    width: 36px;
+    height: 36px;
+  }
+
+  .contacts-vertical {
+    font-size: 11px;
+  }
+
+  .phone, .email {
+    font-size: 11px;
+    padding-left: 20px;
+  }
+
+  .auto-text {
+    font-size: 12px;
+  }
+
+  .checkbox {
+    width: 26px;
+    height: 26px;
+  }
+
+  #calculator-section {
+    padding: 15px;
+  }
+
+  .submit-application-btn {
+    padding: 14px;
+    font-size: 15px;
+  }
+}
+
+/* Ландшафтная ориентация */
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+  .header-top {
+    min-height: 60px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .logo-and-contacts {
+    width: auto;
+    flex: 1;
+  }
+
+  .top-right {
+    width: auto;
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+    margin-left: 15px;
+  }
+
+  .content-section {
+    padding-top: 80px;
+  }
+
+  .auto-tech-trio {
+    gap: 8px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* Стили для блока итоговой стоимости */
+  div[style*="width: 600px"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 10px !important;
+    box-sizing: border-box;
+  }
+  
+  /* Заголовок "Итого" */
+  div[style*="text-align: left; font-size: 20px;"] {
+    text-align: center !important;
+    margin-bottom: 10px !important;
+    width: 100% !important;
+  }
+  
+  /* Контейнер с ценами */
+  div[style*="display: flex; justify-content: flex-start; gap: 10px;"] {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 5px !important;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+  }
+  
+  /* Блоки с ценами */
+  div[style*="display: flex; justify-content: flex-start; gap: 10px;"] > div {
+    width: 100% !important;
+    text-align: center !important;
+  }
+  
+  /* Блок минимального времени - изменено на горизонтальное расположение */
+  div[style*="display: flex; align-items: center; gap: 10px;"] {
+    flex-direction: row !important; /* Изменено с column на row */
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 5px !important;
+    margin-top: 10px !important;
+    flex-wrap: wrap !important;
+  }
+  
+  /* Текст "Минимальное время автомобиля" */
+  div[style*="display: flex; align-items: center; gap: 10px;"] > span:first-child {
+    margin-right: 10px !important;
+  }
+  
+  /* Контейнер для кнопок и значения */
+  div[style*="display: flex; align-items: center; gap: 10px;"] > div {
+    display: flex !important;
+    flex-direction: row !important; /* Горизонтальное расположение кнопок */
+    align-items: center !important;
+    gap: 5px !important;
+  }
+  
+  /* Кнопки +/- */
+  .min-time-btn {
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+} 
+
+/* Плавающая кнопка телефона (только для мобильных) */
+.floating-phone-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #d4af37 0%, #c19b2e 100%);
+    border-radius: 50%;
+    display: none; /* По умолчанию скрыта */
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    animation: pulse 2s infinite;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Показываем только на мобильных */
+@media only screen and (max-width: 768px) {
+    .floating-phone-btn {
+        display: flex;
+    }
+}
+
+.floating-phone-btn:hover {
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.floating-phone-btn svg {
+    width: 30px;
+    height: 30px;
+    fill: white;
+}
+
+/* Анимация пульсации */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(212, 175, 55, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
+    }
+}
+
+/* Для очень маленьких экранов */
+@media only screen and (max-width: 480px) {
+    .floating-phone-btn {
+        width: 50px;
+        height: 50px;
+        right: 15px;
+        bottom: 15px;
+    }
+    
+    .floating-phone-btn svg {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+
+/* Мобильные стили (до 768px) */
+@media only screen and (max-width: 768px) {
+  /* Увеличиваем размер шрифта для меток формы */
+  .form-group label {
+    font-size: 16px; /* Было 14px */
+  }
+  
+  /* Увеличиваем размер шрифта для выбранных элементов */
+  .auto-text {
+    font-size: 14px; /* Было 12px */
+  }
+  
+  /* Увеличиваем размер шрифта для полей ввода */
+  input[type="text"],
+  select,
+  .address-input,
+  .styled-input {
+    font-size: 16px; /* Было 15px */
+  }
+  
+  /* Увеличиваем размер шрифта для вариантов загрузки/выгрузки */
+  .loading-option-label {
+    font-size: 15px; /* Было 14px */
+  }
+  
+  /* Увеличиваем размер подсказок */
+  .form-group > div[style*="align-items: flex-start;"] > div[style*="flex-direction: column;"] > span {
+    font-size: 14px; /* Увеличиваем если нужно */
+  }
+}
+
+/* Дополнительные настройки для очень маленьких экранов */
+@media only screen and (max-width: 480px) {
+  .form-group label {
+    font-size: 15px; /* Чуть меньше на очень маленьких экранах */
+  }
+  
+  .auto-text {
+    font-size: 13px;
+  }
+  
+  .loading-option-label {
+    font-size: 14px;
+  }
+}
